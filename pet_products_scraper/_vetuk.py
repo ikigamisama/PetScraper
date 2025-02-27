@@ -17,8 +17,7 @@ class VetUKETL(PetProductsETL):
         self.SHOP = "VetUK"
         self.BASE_URL = "https://www.vetuk.co.uk"
         self.CATEGORIES = []
-        # self.CATEGORIES = ["/Dog", "/Cat", "/Other-Pets",
-        #                   "/Other-Pets/Bird", "/Type/Own-Brand", "/Raw"]
+        # self.CATEGORIES = ["/Dog", "/Cat", "/Other-Pets", "/Other-Pets/Bird", "/Type/Own-Brand", "/Raw"]
 
     def get_links(self, category: str) -> pd.DataFrame:
         soup = self.extract_from_url('get', category)
